@@ -1,5 +1,7 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
+
+set -e
 
 dir="$(dirname ${BASH_SOURCE[0]})"
 mkdir -p $1/.profile.d
