@@ -3,7 +3,7 @@
 
 set -e
 
-sha="94f3036"
+sha="0e31c3f"
 url="https://assets.lemma.io/lemmad-$sha-linux-amd64"
 
 dir="$(dirname ${BASH_SOURCE[0]})"
