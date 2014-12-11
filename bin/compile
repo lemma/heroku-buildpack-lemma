@@ -12,7 +12,7 @@ cp $dir/lemma.sh $1/.profile.d/
 
 echo -n "-----> Fetching lemmad coprocess..."
 
-wget -qO $1/.profile.d/lemmad $url
+curl -so $1/.profile.d/lemmad $url
 
 echo " done"
 
