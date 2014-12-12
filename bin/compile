@@ -3,7 +3,7 @@
 
 set -e
 
-sha="94f3036"
+sha="0e31c3f"
 url="https://assets.lemma.io/lemmad-$sha-linux-amd64"
 
 dir="$(dirname ${BASH_SOURCE[0]})"
@@ -12,7 +12,7 @@ cp $dir/lemma.sh $1/.profile.d/
 
 echo -n "-----> Fetching lemmad coprocess..."
 
-wget -qO $1/.profile.d/lemmad $url
+curl -so $1/.profile.d/lemmad $url
 
 echo " done"
 
