@@ -14,5 +14,5 @@ done
 
 if [[ -n "$start_lemmad" ]] ; then
   chmod +x $dir/lemmad
-  $dir/lemmad &
+  { while :; do $dir/lemmad ; done ; } &
 fi
