@@ -1,19 +1,23 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir>
 
+# fail fast
 set -e
+
+# parse args
+export BUILD_DIR=$1
+export CACHE_DIR=$2
+export ENV_DIR=$3
 
 sha="593150d"
 url="https://assets.lemma.io/lemmad-$sha-linux-amd64"
 
 dir="$(dirname ${BASH_SOURCE[0]})"
-mkdir -p $1/.profile.d
-cp $dir/lemma.sh $1/.profile.d/
+mkdir -p $BUILD_DIR/.profile.d
+cp $dir/lemma.sh $BUILD_DIR/.profile.d/
 
 echo -n "-----> Fetching lemmad coprocess..."
-
-curl -so $1/.profile.d/lemmad $url
-
+curl -so $BUILD_DIR/.profile.d/lemmad $url
 echo " done"
 
 exit 0
